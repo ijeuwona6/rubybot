@@ -1,5 +1,5 @@
 import discord
-import random
+import OS
 client = discord.Client()
 token = 'ODEyMTI3MDcyNzI1MTA2NzA5.YC8ORg.Eyv0CTls2qr2r_zZpnAGaG0k8PI'
 
@@ -49,6 +49,8 @@ async def on_message(message):
        embed.add_field(name = "```🌍리붓중```", value = "```🚨 서버접속을 금지합니다.```", inline=False)
        embed.set_footer(text=f"{message.author}, ㅣRUBY:RPㅣby 시 호 ♰#0096", icon_url=message.author.avatar_url)
        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/807387263179948052/807543596667764756/RUBY_2.gif")
-       await message.channel.send(embed=embed, content = '@everyone')   
-
-client.run(token)
+       await message.channel.send(embed=embed, content = '@everyone')  
+    
+    
+acces_token = os.environ["BOT_TOKEN"]
+client.run(acces_token)
